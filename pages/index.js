@@ -5,7 +5,10 @@ import CountrySelector from '../components/CountrySelector';
 export default function Index() {
     return (
         <div>
-            <Stats url={config.apiUrl} />
+            <Stats
+                countryName=""
+                url={config.apiUrl}
+            />
             <CountrySelector />
         </div>
     )
