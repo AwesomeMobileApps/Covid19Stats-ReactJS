@@ -30,25 +30,24 @@ export default ({ url, countryName }) => {
     }
 
     return (
-        <div>
+        <StatGrid>
             <h2>{countryName}</h2>
             <p>Last Update: <em>{stats.lastUpdate}</em></p>
-            <div className="statBlock">
+
+            <StatBlock>
                 <h3>Confirmed:</h3>
                 <span>{stats.confirmed.value}</span>
-            </div>
-            <div>
-                <div className="statBlock">
-                    <h3>Recovered:</h3>
-                    <span>{stats.recovered.value}</span>
-                </div>
-            </div>
-            <div>
-                <div className="statBlock">
-                    <h3>Deaths:</h3>
-                    <span>{stats.deaths.value}</span>
-                </div>
-            </div>
-        </div>
+            </StatBlock>
+
+            <StatBlock>
+                <h3>Recovered:</h3>
+                <span>{stats.recovered.value}</span>
+            </StatBlock>
+
+            <StatBlock>
+                <h3>Deaths:</h3>
+                <span>{stats.deaths.value}</span>
+            </StatBlock>
+        </StatGrid>
     );
 }
