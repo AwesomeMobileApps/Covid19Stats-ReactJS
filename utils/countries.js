@@ -241,7 +241,7 @@ export const ISO3Codes = {
     GBR: 'United Kingdom',
     UMI: 'United States Minor Outlying Islands',
     URY: 'Uruguay',
-    USA: 'US',
+    USA: 'USA',
     UZB: 'Uzbekistan',
     VUT: 'Vanuatu',
     VAT: 'Vatican',

@@ -7,15 +7,14 @@ import Stats from './Stats';
 import { ISO3Codes } from '../utils/countries';
 
 export default () => {
-    const defCountryCodeVal = getSelectedCountryCode() || config.defaultCountry;
-    const [selectedCountryCode, setSelectedCountryCode] = useState(defCountryCodeVal);
+    const [selectedCountryCode, setSelectedCountryCode] = useState(config.defaultCountry);
 
     return (
         <div>
             <select onChange={e => { setSelectedCountryCode(e.target.value) }}>
                 {Object.entries(ISO3Codes).map(([code, countryName]) => (
                     <option
-                        selected={selectedCountryCode === code}
+                        defaultValue={selectedCountryCode === code}
                         key={code} value={code}>
                         {countryName}
                     </option>

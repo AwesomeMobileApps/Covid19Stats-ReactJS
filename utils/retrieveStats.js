@@ -13,7 +13,7 @@ export default (apiUrl) => {
             const results = await fetch(`${apiUrl}`).then(
                 response => response.json()
             ).catch(err => {
-                setError(err)
+                setIsError(err)
             });
             setIsStats(results);
             setIsLoading(false);
