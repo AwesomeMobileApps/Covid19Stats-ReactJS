@@ -19,13 +19,13 @@ const StatBlock = styled.div`
 `;
 
 export default ({ url, countryName }) => {
-    const { stats, loading, error } = retrieveStats(url);
+    const { stats, isError } = retrieveStats(url);
 
-    if (!stats || !loading) {
+    if (!stats) {
         return <p>Loading...</p>;
     }
 
-    if (!error) {
+    if (!isError) {
         return <p>Oops! An error occured :(</p>;
     }
 

@@ -2,7 +2,6 @@
 import { useState } from 'react';
 
 import config from '../config';
-import retrieveStats from '../utils/retrieveStats';
 import Stats from './Stats';
 import { ISO3Codes } from '../utils/countries';
 
