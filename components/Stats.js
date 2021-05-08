@@ -26,7 +26,7 @@ export default ({ url, countryName }) => {
     }
 
     if (!isError) {
-        return <p>Oops! An error occured :(</p>;
+        return <p>Oops! An error occurred :(</p>;
     }
 
     return (
