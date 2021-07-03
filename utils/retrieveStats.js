@@ -4,17 +4,18 @@ export default (apiUrl) => {
     const [stats, setStats] = useState();
     const [isError, setIsError] = useState(false);
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                setIsError(false);
-                const results = await fetch(`${apiUrl}`);
-                console.log('Fetching Data ...');
-                setStats(results.json());
-            } catch (err) {
-                setIsError(err)
-            }
+    const fetchData = async () => {
+        try {
+            setIsError(false);
+            const results = await fetch(`${apiUrl}`);
+            console.log(`Fetching data for ${apiUrl}`);
+            setStats(results.json());
+        } catch (err) {
+            setIsError(err)
         }
+    };
+
+    useEffect(() => {
         fetchData();
     }, [apiUrl]);
 
