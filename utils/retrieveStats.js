@@ -6,14 +6,14 @@ export default (apiUrl) => {
 
     useEffect(() => {
         async function fetchData() {
-            console.log('Fetching Data');
-            setIsError();
-            const results = await fetch(`${apiUrl}`).then(
-                response => response.json()
-            ).catch(err => {
+            try {
+                setIsError(false);
+                const results = await fetch(`${apiUrl}`);
+                console.log('Fetching Data ...');
+                setStats(results.json());
+            } catch (err) {
                 setIsError(err)
-            });
-            setStats(results);
+            }
         }
         fetchData();
     }, [apiUrl]);
