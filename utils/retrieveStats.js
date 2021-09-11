@@ -8,7 +8,7 @@ export default (apiUrl) => {
         try {
             setIsError(false);
             const results = await fetch(`${apiUrl}`);
-            console.log(`Fetching data for ${apiUrl}`);
+            console.log(`Fetching data for: ${apiUrl}`);
             setStats(results.json());
         } catch (err) {
             setIsError(err)
