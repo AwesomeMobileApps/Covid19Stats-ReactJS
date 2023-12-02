@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import retrieveStats from '../utils/retrieveStats';
+import useRetrieveStats from '../utils/useRetrieveStats';
 
 const StatGrid = styled.div`
   display: grid;
@@ -19,7 +19,7 @@ const StatBlock = styled.div`
 `;
 
 export default ({ url, countryName }) => {
-    const { stats, isError } = retrieveStats(url);
+    const { stats, isError } = useRetrieveStats(url);
 
     if (!stats) {
         return <p>Loading...</p>;
