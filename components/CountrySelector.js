@@ -8,7 +8,7 @@ export default () => {
 
     return (
         <div>
-            <select onChange={e => { setSelectedCountryCode(e.target.value) }}>
+            <select onChange={e => setSelectedCountryCode(e.target.value)}>
                 {Object.entries(ISO3Codes).map(([code, countryName]) => (
                     <option
                         defaultValue={selectedCountryCode === code}
